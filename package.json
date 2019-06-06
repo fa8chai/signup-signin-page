@@ -3,8 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.0.1",
+    "@material/notched-outline": "^1.1.1",
+    "@material/react-text-field": "^0.12.1",
+    "@material/textfield": "^2.1.1",
+    "bootstrap": "^4.3.1",
+    "indicative": "^5.0.8",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-facebook-login": "^4.1.1",
+    "react-google-login": "^5.0.4",
+    "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.1"
   },
   "scripts": {
