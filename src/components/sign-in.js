@@ -7,7 +7,7 @@ import D from "../im/D.png";
 import {Link}  from 'react-router-dom'
 
 
-class Signup extends Component {
+class Signin extends Component {
     constructor(props){
         super(props);
         this.state = {email:"",pass:""}
@@ -113,4 +113,4 @@ class Signup extends Component {
 
 }
 
-export default Signup;
+export default Signin;
