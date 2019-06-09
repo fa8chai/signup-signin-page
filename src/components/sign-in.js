@@ -17,7 +17,7 @@ class Signin extends Component {
         
      handelchange = (e) => {
             this.setState({
-                [e.target.classNam] : [e.target.value]
+                [e.target.className] : [e.target.value]
             })
        }
     handelsubmit = (e) => {
@@ -28,11 +28,19 @@ class Signin extends Component {
     
     
     responseFacebook = (response) => {
-       console.log("hi")
+       console.log(response)
+       .then(response => response.json())
+        .then(data => {
+            if(data.status == 200){
+                this.props.history.push("./home");
+                console.log('Successfully Login');
+          }
+        })
+
     }
 
     responseGoogle = (response) => {
-        console.log("google")
+        console.log(response)
     }
        
     render(){
@@ -57,7 +65,7 @@ class Signin extends Component {
                    <p>Sign in with social media</p>
                    <div id="login">
 
-                           <div onClick={this.responseFacebook} className="fb-login-button" data-width="400px" data-size="large" data-button-type="login_with" data-auto-logout-link="false" data-use-continue-as="false"></div>
+                           <div   onClick={this.responseFacebook} className="fb-login-button" data-width="400px" data-size="large" data-button-type="login_with" data-auto-logout-link="false" data-use-continue-as="false"></div>
                             <br></br>
                             <br></br>
                            <div style={{width:"400px"}} id="google"  className="g-signin2" data-onsuccess={this.responseGoogle}></div>
