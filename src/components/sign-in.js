@@ -27,16 +27,14 @@ class Signin extends Component {
        }
     
     
-    responseFacebook = (response) => {
+    responseFacebook = async response => {
        console.log(response)
-       .then(response => response.json())
-        .then(data => {
-            if(data.status == 200){
-                this.props.history.push("./home");
-                console.log('Successfully Login');
-          }
-        })
-
+       try {
+       
+        this.props.history.push("./home");
+      } catch (e) {
+        alert(e.message);
+      }
     }
 
     responseGoogle = (response) => {
