@@ -1,6 +1,35 @@
 #login{
     margin-bottom: 2rem;
 }
+.fa-facebook{
+    padding:10px;
+    margin-right:10px;
+    
+}
+.my-facebook-button-class{
+    height: 40px;
+    color: white;
+    width: 100%;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid transparent;
+    text-align: left;
+    background-color: rgb(25, 98, 158)
+}
+.my-google-button-class{
+    width:100%;
+    text-align: center;
+    letter-spacing: 1px;
+    
+    
+
+}
+
+
+
+
 .btn {
     margin-bottom: 1rem
 }

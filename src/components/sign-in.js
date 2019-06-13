@@ -4,7 +4,10 @@ import TextField from '@material-ui/core/TextField';
 import "../style-sheets/sign-in.css";
 import image from "../im/image.png";
 import D from "../im/D.png";
-import {Link}  from 'react-router-dom'
+import {Link}  from 'react-router-dom';
+import FacebookLogin from 'react-facebook-login';
+
+import GoogleLogin from 'react-google-login';
 
 
 class Signin extends Component {
@@ -27,18 +30,18 @@ class Signin extends Component {
        }
     
     
-    responseFacebook = async response => {
-       console.log(response)
-       try {
+    
+    responseFacebook = response => {
+       console.log(response);
+       console.log(response.name);
        
-        this.props.history.push("./home");
-      } catch (e) {
-        alert(e.message);
-      }
+       
     }
 
-    responseGoogle = (response) => {
-        console.log(response)
+    responseGoogle = response => {
+        console.log(response);
+        console.log(response.provileObj.name);
+        console.log(response.provileObj.email)
     }
        
     render(){
@@ -61,13 +64,32 @@ class Signin extends Component {
 
                    <h1>Sign in</h1>
                    <p>Sign in with social media</p>
-                   <div id="login">
+                   <FacebookLogin
+        
+        
+        appId="2079820965479150" 
+        
+        fields="name,email,picture"
+        callback={this.responseFacebook}
+        cssClass="my-facebook-button-class"
+        icon="fa-facebook"
+      />   
+                   
+                   <br />
+      <br />
+      
 
-                           <div   onClick={this.responseFacebook} className="fb-login-button" data-width="400px" data-size="large" data-button-type="login_with" data-auto-logout-link="false" data-use-continue-as="false"></div>
-                            <br></br>
-                            <br></br>
-                           <div style={{width:"400px"}} id="google"  className="g-signin2" data-onsuccess={this.responseGoogle}></div>
-                   </div>
+      <GoogleLogin
+        clientId="935485848669-8509ciprtgkg61n1afsufp0omfo9ht55.apps.googleusercontent.com"
+        className="my-google-button-class"
+        buttonText="Login With Google"
+        onSuccess={this.responseGoogle}
+        onFailure={this.responseGoogle}
+        
+      /> 
+      <br />
+<br />
+
                     
                     
                     

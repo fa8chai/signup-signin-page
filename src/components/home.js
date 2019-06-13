@@ -5,9 +5,11 @@ class Home extends Component{
     render(){
         return (
             <div>
-               <h3>Wellcome {data.name}</h3>
+               <h3>Wellcome </h3>
 
             </div>
         )
     }
 }
+
+export default Home;
