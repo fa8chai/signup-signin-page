@@ -32,16 +32,16 @@ class Signin extends Component {
     
     
     responseFacebook = response => {
-       console.log(response);
-       console.log(response.name);
+      
+       alert("Hello "+response.name);
        
        
     }
 
     responseGoogle = response => {
-        console.log(response);
-        console.log(response.provileObj.name);
-        console.log(response.provileObj.email)
+        
+       alert("Hello "+response.givenName);
+        
     }
        
     render(){
@@ -111,6 +111,7 @@ class Signin extends Component {
                         variant="outlined"
                     /></div>
                     <div><TextField
+                    placeholder="********"
                         id="outlined-password-input"
                         label="Password"
                         className="pass"

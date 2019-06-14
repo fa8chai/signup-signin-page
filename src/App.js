@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Signup from "./components/sign-up";
 import Signin from "./components/sign-in";
-import Home from "./components/home";
+
 import {
   BrowserRouter as Router,
  
@@ -17,7 +17,7 @@ function App() {
     <Switch>
         <Route exact path="/" component={Signup} />
         <Route path="/signin" component={Signin} />
-        <Route path="/home" component={Home} />
+        
 
     </Switch>
     

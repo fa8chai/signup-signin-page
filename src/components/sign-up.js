@@ -177,7 +177,7 @@ const validEmailRegex =
                     required={true}
                         id="outlined-password-input"
                         label="Password"
-                        
+                        placeholder="********"
                         className="pass"
                         onChange={this.handelchange}
                         type="password"
