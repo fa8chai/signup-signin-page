@@ -82,6 +82,7 @@ const validEmailRegex =
             if(valid(this.state.errors)) {
                 console.info('Valid Form')
                 e.target.reset();
+                alert("Hello "+this.state.fname+" "+this.state.lname)
               }else{
                 console.error('Invalid Form')
                 alert('Invalid Form')
@@ -101,7 +102,7 @@ const validEmailRegex =
     render(){
       const {errors} = this.state;
         return (
-            <div className="container-fluid" >
+            <div className="container-fluid">
             <div className="row">
 
                 <div className="col-md-5" style={{height:"100vh"}}>

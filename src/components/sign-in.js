@@ -40,17 +40,17 @@ class Signin extends Component {
 
     responseGoogle = response => {
         
-       alert("Hello "+response.givenName);
+       alert("Hello "+response.profileObj.givenName+" "+response.profileObj.familyName);
         
     }
        
     render(){
         
         return (
-            <div className="container-fluid" >
+            <div className="container-fluid " >
             <div className="row">
 
-                <div className="col-md-5" style={{height:"100vh"}}>
+                <div className="col-md-5" >
                       <img src={image} width='100%' height="100%" alt="logo"></img>
                       <h3>Lorem ipsum dolor sit amet, at fusce lectus diam adipiscing nulla</h3>
                 </div>
